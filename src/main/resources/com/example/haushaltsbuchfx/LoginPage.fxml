@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <TextField id="usernameTextField" fx:id="usernameTextField" layoutX="164.0" layoutY="138.0" prefHeight="25.0" prefWidth="173.0" promptText="Benutzername" />
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="117.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../../../Downloads/Haushaltsbuch-master/Haushaltsbuch-master/src/main/resources/images/avatar.png" />
+         </image></ImageView>
+      <ImageView id="passwordIcon" fitHeight="25.0" fitWidth="25.0" layoutX="117.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../../../Downloads/Haushaltsbuch-master/Haushaltsbuch-master/src/main/resources/images/einstellungen.png" />
+         </image></ImageView>
+      <PasswordField id="passwordTextField" fx:id="passwordTextfield" layoutX="164.0" layoutY="184.0" prefHeight="25.0" prefWidth="173.0" promptText="Password" />
+      <Label id="loginTitelLabel" fx:id="loginTitelLabel" alignment="CENTER" layoutX="146.0" layoutY="42.0" prefHeight="68.0" prefWidth="209.0" text="Anmeldung" textAlignment="CENTER">
+         <font>
+            <Font name="Bodoni MT" size="40.0" />
+         </font>
+      </Label>
+      <Button id="loginButton" fx:id="loginButton" alignment="CENTER" layoutX="206.0" layoutY="241.0" mnemonicParsing="false" onAction="#onLoginButtonClick" prefHeight="25.0" prefWidth="71.0" text="Login" textAlignment="CENTER" />
+   </children>
+</Pane>
