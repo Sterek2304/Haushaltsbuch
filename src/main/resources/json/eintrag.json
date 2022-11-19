@@ -23,12 +23,6 @@
     "beschreibung" : "Rewe",
     "kategorie" : "Einkaufen",
     "zahlungsweise" : "K"
-  }, {
-    "datum" : "10/30/22",
-    "betrag" : 0.99,
-    "beschreibung" : "iCloud",
-    "kategorie" : "EDV",
-    "zahlungsweise" : "K"
   } ],
   "KW2" : [ ],
   "KW3" : [ ],

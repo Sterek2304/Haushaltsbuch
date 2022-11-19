@@ -1,9 +1,21 @@
 package controller;
 
+import javafx.application.Platform;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+import lombok.Data;
+import model.Eintrag;
+import model.Haushaltsbuch;
 
+import java.time.LocalDate;
+
+@Data
 public class HomePageController {
     private static int ausgewaehlteKW = 1;
 
@@ -17,12 +29,32 @@ public class HomePageController {
     private Label ausgewaehltesDatumLabel;
 
     @FXML
-    protected void initialize() {
-        ausgewaehltesDatumLabel.setText("KW " + ausgewaehlteKW);
+    private TableView<Eintrag> contentTable;
 
-        if(ausgewaehlteKW == 1) {
-            disableButton(kwZurueckButton);
-        }
+    @FXML
+    private TableColumn<Eintrag, LocalDate> datumTableCol;
+    @FXML
+    private TableColumn<Eintrag, Double> betragTableCol;
+    @FXML
+    private TableColumn<Eintrag, String> beschreibungTableCol;
+    @FXML
+    private TableColumn<Eintrag, String> kategorieTableCol;
+    @FXML
+    private TableColumn<Eintrag, String> zahlungsweiseTableCol;
+
+    private Haushaltsbuch haushaltsbuch;
+
+    @FXML
+    protected void initialize() {
+        Platform.runLater(() -> {
+            ausgewaehltesDatumLabel.setText("KW " + ausgewaehlteKW);
+
+            if(ausgewaehlteKW == 1) {
+                disableButton(kwZurueckButton);
+            }
+
+            loadData();
+        });
     }
 
     @FXML
@@ -83,5 +115,15 @@ public class HomePageController {
      * */
     private void enableButton(Button button) {
         button.setDisable(false);
+    }
+
+    public void loadData() {
+        ObservableList<Eintrag> data = FXCollections.observableList(haushaltsbuch.getKw1());
+        datumTableCol.setCellValueFactory(new PropertyValueFactory<>("datum"));
+        betragTableCol.setCellValueFactory(new PropertyValueFactory<>("betrag"));
+        beschreibungTableCol.setCellValueFactory(new PropertyValueFactory<>("beschreibung"));
+        kategorieTableCol.setCellValueFactory(new PropertyValueFactory<>("kategorie"));
+        zahlungsweiseTableCol.setCellValueFactory(new PropertyValueFactory<>("zahlungsweise"));
+        contentTable.setItems(data);
     }
 }

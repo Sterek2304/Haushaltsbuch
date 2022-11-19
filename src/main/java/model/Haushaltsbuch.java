@@ -1,6 +1,8 @@
 package model;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -38,21 +40,18 @@ public class Haushaltsbuch {
 	@SerializedName("KW10")
 	private List<Eintrag> kw10;
 
-	public void print_haushaltsbuch() {
-		print("KW1", kw1);
-		print("KW2", kw2);
-		print("KW3", kw3);
-		print("KW4", kw4);
-		print("KW5", kw5);
-		print("KW6", kw6);
-		print("KW7", kw7);
-		print("KW8", kw8);
-		print("KW9", kw9);
-		print("KW10", kw10);
-	}
-	
-	private void print(String monat, List<Eintrag> eintraege) {
-		System.out.println(monat + ":");
-		eintraege.forEach(System.out::println);
+	private Map<String, List<Eintrag>> ganzeHaushaltsbuch = new HashMap<>();
+
+	public Haushaltsbuch() {
+		ganzeHaushaltsbuch.put("1", kw1);
+		ganzeHaushaltsbuch.put("2", kw2);
+		ganzeHaushaltsbuch.put("3", kw3);
+		ganzeHaushaltsbuch.put("4", kw4);
+		ganzeHaushaltsbuch.put("5", kw5);
+		ganzeHaushaltsbuch.put("6", kw6);
+		ganzeHaushaltsbuch.put("7", kw7);
+		ganzeHaushaltsbuch.put("8", kw8);
+		ganzeHaushaltsbuch.put("9", kw9);
+		ganzeHaushaltsbuch.put("10", kw10);
 	}
 }

@@ -10,7 +10,8 @@ module com.example.haushaltsbuchfx {
 
     opens com.example.haushaltsbuchfx to javafx.fxml;
     opens controller to javafx.fxml;
-    opens model to com.google.gson;
+    opens model;
     exports com.example.haushaltsbuchfx;
-    exports enums to com.google.gson;
+    exports enums;
+    exports model;
 }
