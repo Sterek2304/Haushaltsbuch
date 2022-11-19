@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="800.0" maxWidth="1000.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomePageController">
+   <children>
+      <MenuBar>
+        <menus>
+            <Menu mnemonicParsing="false" text="Datei">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Neu" />
+                  <MenuItem mnemonicParsing="false" text="Speichern" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Import" />
+                  <MenuItem mnemonicParsing="false" text="Export" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Einstellungen">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Profil" />
+                  <MenuItem mnemonicParsing="false" text="Abmelden" />
+               </items></Menu>
+        </menus>
+      </MenuBar>
+      <Pane prefHeight="275.0" prefWidth="1000.0">
+         <children>
+            <Label layoutX="288.0" layoutY="14.0" text="Haushaltsplaner">
+               <font>
+                  <Font size="60.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" layoutX="-2.0" layoutY="142.0" prefHeight="33.0" prefWidth="206.0" spacing="10.0">
+               <children>
+                  <Button fx:id="kwZurueckButton" mnemonicParsing="false" onAction="#onKWZurueckButtonCilick" text="&lt;" />
+                  <Label fx:id="ausgewaehltesDatumLabel" alignment="CENTER" prefHeight="30.0" prefWidth="73.0" text="KW 1">
+                     <font>
+                        <Font name="System Italic" size="20.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="kwVorButton" mnemonicParsing="false" onAction="#onKWVorButtonClick" text="&gt;" />
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <TableView prefHeight="672.0" prefWidth="1000.0">
+        <columns>
+          <TableColumn prefWidth="100.0" text="Datum" />
+          <TableColumn prefWidth="100.0" text="Betrag" />
+            <TableColumn prefWidth="560.0" text="Beschreibung" />
+            <TableColumn text="Kategorie" />
+            <TableColumn minWidth="0.0" text="Karte" />
+            <TableColumn text="Bar" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>
