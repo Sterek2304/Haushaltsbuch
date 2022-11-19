@@ -4,5 +4,6 @@ module com.example.haushaltsbuchfx {
 
 
     opens com.example.haushaltsbuchfx to javafx.fxml;
+    opens controller to javafx.fxml;
     exports com.example.haushaltsbuchfx;
 }
