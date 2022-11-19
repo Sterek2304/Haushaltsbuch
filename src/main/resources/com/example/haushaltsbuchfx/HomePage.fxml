@@ -34,14 +34,13 @@
             <Button fx:id="kwVorButton" mnemonicParsing="false" onAction="#onKWVorButtonClick" text="&gt;" />
         </HBox>
     </Pane>
-    <TableView prefHeight="672.0" prefWidth="1000.0">
+    <TableView id="contentTable" fx:id="contentTable" prefHeight="672.0" prefWidth="1000.0">
         <columns>
-            <TableColumn prefWidth="100.0" text="Datum" />
-            <TableColumn prefWidth="100.0" text="Betrag" />
-            <TableColumn prefWidth="560.0" text="Beschreibung" />
-            <TableColumn text="Kategorie" />
-            <TableColumn minWidth="0.0" text="Karte" />
-            <TableColumn text="Bar" />
+            <TableColumn fx:id="datumTableCol" prefWidth="100.0" text="Datum" />
+            <TableColumn fx:id="betragTableCol" prefWidth="100.0" text="Betrag" />
+            <TableColumn fx:id="beschreibungTableCol" prefWidth="560.0" text="Beschreibung" />
+            <TableColumn fx:id="kategorieTableCol" prefWidth="136.0" text="Kategorie" />
+            <TableColumn fx:id="zahlungsweiseTableCol" minWidth="0.0" prefWidth="103.0" text="Zahlungsweise" />
         </columns>
     </TableView>
 </VBox>

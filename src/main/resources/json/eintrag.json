@@ -1,0 +1,36 @@
+{
+  "KW1" : [ {
+    "datum" : "1/3/22",
+    "betrag" : 6.5,
+    "beschreibung" : "30° (h) + 60° (d)",
+    "kategorie" : "Wäsche",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "1/4/22",
+    "betrag" : 3.99,
+    "beschreibung" : "Say Money Pro (Handy)",
+    "kategorie" : "EDV",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "1/6/22",
+    "betrag" : 6.5,
+    "beschreibung" : "30° (d) + 60° (h)",
+    "kategorie" : "Wäsche",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "1/7/22",
+    "betrag" : 79.61,
+    "beschreibung" : "Rewe",
+    "kategorie" : "Einkaufen",
+    "zahlungsweise" : "K"
+  } ],
+  "KW2" : [ ],
+  "KW3" : [ ],
+  "KW4" : [ ],
+  "KW5" : [ ],
+  "KW6" : [ ],
+  "KW7" : [ ],
+  "KW8" : [ ],
+  "KW9" : [ ],
+  "KW10" : [ ]
+}
