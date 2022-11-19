@@ -10,10 +10,6 @@ import java.time.format.DateTimeFormatter;
 @Data
 public class Eintrag {
 	private static final String euroZeichen = "\u20AC";
-	//TODO: negative und positive Wert im Haushaltsbuch erlauben
-	//		und die Anzeige entsprechend anpassen
-	private static final String minusZeichen = "-";
-	private static final String plusZeichen = "+";
 	private LocalDate datum;
 	private double betrag;
 	private String beschreibung;
@@ -36,7 +32,6 @@ public class Eintrag {
 	@Override
 	public String toString() {
 		return String.format("\t%-13s %-40s - %6.2f%-7s [%s] - (%s)", getGermanDate(), beschreibung, betrag, euroZeichen, kategorie, zahlungsweise);
-//		return String.format("\t%-20s - %5.2f%s [%s], ausgegeben am: %s (%s)", beschreibung, betrag, euroZeichen, kategorie, datum, zahlungsweise);
 	}
 
 }

@@ -1,32 +1,104 @@
 {
   "KW1" : [ {
     "datum" : "1/3/22",
-    "betrag" : 6.5,
+    "betrag" : -6.5,
     "beschreibung" : "30° (h) + 60° (d)",
     "kategorie" : "Wäsche",
     "zahlungsweise" : "K"
   }, {
     "datum" : "1/4/22",
-    "betrag" : 3.99,
+    "betrag" : -3.99,
     "beschreibung" : "Say Money Pro (Handy)",
     "kategorie" : "EDV",
     "zahlungsweise" : "K"
   }, {
     "datum" : "1/6/22",
-    "betrag" : 6.5,
+    "betrag" : -6.5,
     "beschreibung" : "30° (d) + 60° (h)",
     "kategorie" : "Wäsche",
     "zahlungsweise" : "K"
   }, {
     "datum" : "1/7/22",
-    "betrag" : 79.61,
+    "betrag" : -79.61,
     "beschreibung" : "Rewe",
     "kategorie" : "Einkaufen",
     "zahlungsweise" : "K"
   } ],
-  "KW2" : [ ],
-  "KW3" : [ ],
-  "KW4" : [ ],
+  "KW2" : [ {
+    "datum" : "1/12/22",
+    "betrag" : -4.99,
+    "beschreibung" : "Sky Ticket",
+    "kategorie" : "Streaming",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "1/14/22",
+    "betrag" : -80.34,
+    "beschreibung" : "Rewe",
+    "kategorie" : "Einkaufen",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "1/14/22",
+    "betrag" : -6.5,
+    "beschreibung" : "30° (h) + 60° (d)",
+    "kategorie" : "Wäsche",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "1/16/22",
+    "betrag" : -7.92,
+    "beschreibung" : "Rossmann",
+    "kategorie" : "Drogerie",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "1/16/22",
+    "betrag" : -15.0,
+    "beschreibung" : "Flaschenpost",
+    "kategorie" : "Einkaufen",
+    "zahlungsweise" : "K"
+  } ],
+  "KW3" : [ {
+    "datum" : "1/21/22",
+    "betrag" : -74.47,
+    "beschreibung" : "Rewe",
+    "kategorie" : "Einkaufen",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "1/21/22",
+    "betrag" : -6.5,
+    "beschreibung" : "30° (d) + 60° (h)",
+    "kategorie" : "Wäsche",
+    "zahlungsweise" : "K"
+  } ],
+  "KW4" : [ {
+    "datum" : "1/25/22",
+    "betrag" : 230.24,
+    "beschreibung" : "Gehalt",
+    "kategorie" : "Gehalt",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "1/25/22",
+    "betrag" : -46.68,
+    "beschreibung" : "Amazon",
+    "kategorie" : "",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "1/26/22",
+    "betrag" : -45.98,
+    "beschreibung" : "Unterhosen",
+    "kategorie" : "Kleidung",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "1/28/22",
+    "betrag" : -74.64,
+    "beschreibung" : "Rewe",
+    "kategorie" : "Einkaufen",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "1/28/22",
+    "betrag" : -6.5,
+    "beschreibung" : "60° + 30° (d)",
+    "kategorie" : "Wäsche",
+    "zahlungsweise" : "K"
+  } ],
   "KW5" : [ ],
   "KW6" : [ ],
   "KW7" : [ ],

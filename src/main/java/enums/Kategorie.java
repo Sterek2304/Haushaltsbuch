@@ -37,7 +37,10 @@ public enum Kategorie {
 	BUECHER("B", "B\u00FCcher"),
 
 	@SerializedName("Haushalt")
-	HAUSHALT("H", "Haushalt");
+	HAUSHALT("H", "Haushalt"),
+
+	@SerializedName("Streaming")
+	STREAMING("S", "Streaming");
 	
 	private String kuerzel;
 	private String beschreibung;
