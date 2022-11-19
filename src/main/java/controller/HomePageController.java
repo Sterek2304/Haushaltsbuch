@@ -5,7 +5,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 public class HomePageController {
-    private static int ausgewaehlteKW = 2;
+    private static int ausgewaehlteKW = 1;
 
     @FXML
     private Button kwZurueckButton;
