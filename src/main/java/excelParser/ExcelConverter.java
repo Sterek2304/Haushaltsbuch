@@ -1,4 +1,4 @@
-package json;
+package excelParser;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -90,7 +90,7 @@ public class ExcelConverter {
 											rowData.put(headerName, "");
 											break;
 										default:
-											rowData.put(headerName, cell.getStringCellValue());
+											rowData.put(headerName, cell.getRichStringCellValue().toString());
 											break;
 									}
 								} else {

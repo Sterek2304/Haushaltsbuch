@@ -1,15 +1,10 @@
 package enums;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum Zahlungsweise {
-    @SerializedName("")
     KEINE_ZAHLUNGSWEISE("", ""),
-
-    @SerializedName("Karte")
     KARTE("K", "Karte"),
-
-    @SerializedName("Bar")
     BAR("B", "Bar");
 
     private String kuerzel;
@@ -28,6 +23,7 @@ public enum Zahlungsweise {
         return Zahlungsweise.valueOf(kuerzel);
     }
 
+    @JsonValue
     public String getKuerzel() {
         return this.kuerzel;
     }

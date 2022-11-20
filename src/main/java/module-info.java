@@ -7,7 +7,6 @@ module com.example.haushaltsbuchfx {
     requires com.fasterxml.jackson.databind;
     requires poi.ooxml;
 
-
     opens com.example.haushaltsbuchfx to javafx.fxml;
     opens controller to javafx.fxml;
     opens model;

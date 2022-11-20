@@ -1,52 +1,28 @@
 package enums;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum Kategorie {
-	@SerializedName("?")
 	KEINE_KATEGORIE("?", "?"),
-	
-	@SerializedName("Einkaufen")
 	LEBENSMITTEL("L", "Einkaufen"),
-	
-	@SerializedName("EDV")
 	EDV("EDV", "EDV"),
-	
-	@SerializedName("Uni")
 	UNI("Uni", "Uni"),
-	
-	@SerializedName("W\u00E4sche")
 	WAESCHE("W", "W\u00E4sche"),
-	
-	@SerializedName("Kleidung")
 	KLEIDUNG("KL", "Kleidung"),
-	
-	@SerializedName("Geschenke")
 	GESCHENKE("G", "Geschenke"),
-	
-	@SerializedName("Sonstiges")
 	SONSTIGES("So", "Sonstiges"),
-	
-	@SerializedName("Essen gehen")
 	AUSGEHEN("Aus", "Essen gehen"),
-	
-	@SerializedName("Drogerie")
 	DROGERIE("D", "Drogerie"),
-	
-	@SerializedName("B\u00FCcher")
 	BUECHER("B", "B\u00FCcher"),
-
-	@SerializedName("Filme")
 	FILME("F", "Filme"),
-
-	@SerializedName("Haushalt")
 	HAUSHALT("H", "Haushalt"),
-
-	@SerializedName("Streaming")
 	STREAMING("S", "Streaming"),
-
-	@SerializedName("Gehalt")
-	GEHALT("G", "Gehalt");
+	GEHALT("G", "Gehalt"),
+	SNACKS("SN", "Snacks"),
+	HANDY("H", "Handy"),
+	BESTELLEN("Be", "Bestellen"),
+	URLAUB("U", "Urlaub"),
+	FREIZEIT("Fr", "Freizeit");
 	
 	private String kuerzel;
 	private String beschreibung;
@@ -63,7 +39,8 @@ public enum Kategorie {
 	public String getKuerzel() {
 		return this.kuerzel;
 	}
-	
+
+	@JsonValue
 	public String getBeschreibung() {
 		return this.beschreibung;
 	}
