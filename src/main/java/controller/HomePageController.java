@@ -62,7 +62,7 @@ public class HomePageController {
         ausgewaehlteKW++;
         ausgewaehltesDatumLabel.setText("KW " + ausgewaehlteKW);
 
-        if(ausgewaehlteKW == 52) {
+        if(haushaltsbuch.getAnzahlKW() == ausgewaehlteKW) {
             disableButton(kwVorButton);
         }
 

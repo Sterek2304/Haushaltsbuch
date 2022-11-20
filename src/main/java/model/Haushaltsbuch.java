@@ -59,4 +59,8 @@ public class Haushaltsbuch {
 	public List<Eintrag> getKW(int index) {
 		return haushaltsbuch().get(index);
 	}
+
+	public int getAnzahlKW() {
+		return haushaltsbuch().size();
+	}
 }
