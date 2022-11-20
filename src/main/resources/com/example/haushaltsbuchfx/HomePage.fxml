@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
@@ -12,10 +13,6 @@
             <SeparatorMenuItem mnemonicParsing="false" />
             <MenuItem mnemonicParsing="false" text="Import" />
             <MenuItem mnemonicParsing="false" text="Export" />
-        </Menu>
-        <Menu mnemonicParsing="false" text="Einstellungen">
-            <MenuItem mnemonicParsing="false" text="Profil" />
-            <MenuItem mnemonicParsing="false" text="Abmelden" />
         </Menu>
     </MenuBar>
     <Pane prefHeight="275.0" prefWidth="1000.0">
@@ -33,14 +30,26 @@
             </Label>
             <Button fx:id="kwVorButton" mnemonicParsing="false" onAction="#onKWVorButtonClick" text="&gt;" />
         </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="288.0" layoutY="146.0" prefHeight="25.0" prefWidth="327.0">
+          <Label prefHeight="17.0" prefWidth="27.0" text="Tag" />
+          <DatePicker promptText="01.01.2022">
+              <HBox.margin>
+                  <Insets right="25.0" />
+              </HBox.margin></DatePicker>
+          <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="61.0" text="Suchen" />
+      </HBox>
+      <HBox alignment="CENTER" layoutX="688.0" layoutY="150.0" prefHeight="17.0" prefWidth="186.0" spacing="25.0">
+          <RadioButton mnemonicParsing="false" text="Einnahmen" />
+          <RadioButton mnemonicParsing="false" text="Ausgaben" />
+      </HBox>
     </Pane>
     <TableView id="contentTable" fx:id="contentTable" prefHeight="672.0" prefWidth="1000.0">
         <columns>
-            <TableColumn fx:id="datumTableCol" prefWidth="100.0" text="Datum" />
-            <TableColumn fx:id="betragTableCol" prefWidth="100.0" text="Betrag €" />
+            <TableColumn fx:id="datumTableCol" prefWidth="100.0" style="-fx-alignment: CENTER_RIGHT;" text="Datum" />
+            <TableColumn fx:id="betragTableCol" prefWidth="100.0" style="-fx-alignment: CENTER_RIGHT;" text="Betrag €" />
             <TableColumn fx:id="beschreibungTableCol" prefWidth="560.0" text="Beschreibung" />
-            <TableColumn fx:id="kategorieTableCol" prefWidth="136.0" text="Kategorie" />
-            <TableColumn fx:id="zahlungsweiseTableCol" minWidth="0.0" prefWidth="103.0" text="Zahlungsweise" />
+            <TableColumn fx:id="kategorieTableCol" prefWidth="136.0" style="-fx-alignment: CENTER;" text="Kategorie" />
+            <TableColumn fx:id="zahlungsweiseTableCol" minWidth="0.0" prefWidth="103.0" style="-fx-alignment: CENTER;" text="Zahlungsweise" />
         </columns>
     </TableView>
 </VBox>

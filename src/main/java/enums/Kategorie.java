@@ -3,8 +3,8 @@ package enums;
 import com.google.gson.annotations.SerializedName;
 
 public enum Kategorie {
-	@SerializedName("")
-	KEINE_KATEGORIE("", ""),
+	@SerializedName("?")
+	KEINE_KATEGORIE("?", "?"),
 	
 	@SerializedName("Einkaufen")
 	LEBENSMITTEL("L", "Einkaufen"),
@@ -36,11 +36,17 @@ public enum Kategorie {
 	@SerializedName("B\u00FCcher")
 	BUECHER("B", "B\u00FCcher"),
 
+	@SerializedName("Filme")
+	FILME("F", "Filme"),
+
 	@SerializedName("Haushalt")
 	HAUSHALT("H", "Haushalt"),
 
 	@SerializedName("Streaming")
-	STREAMING("S", "Streaming");
+	STREAMING("S", "Streaming"),
+
+	@SerializedName("Gehalt")
+	GEHALT("G", "Gehalt");
 	
 	private String kuerzel;
 	private String beschreibung;

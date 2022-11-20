@@ -78,7 +78,7 @@
     "datum" : "1/25/22",
     "betrag" : -46.68,
     "beschreibung" : "Amazon",
-    "kategorie" : "",
+    "kategorie" : "?",
     "zahlungsweise" : "K"
   }, {
     "datum" : "1/26/22",
@@ -103,7 +103,7 @@
     "datum" : "2/2/22",
     "betrag" : -133.39,
     "beschreibung" : "Amazon",
-    "kategorie" : "",
+    "kategorie" : "?",
     "zahlungsweise" : "K"
   }, {
     "datum" : "2/4/22",
@@ -134,13 +134,13 @@
     "datum" : "2/8/22",
     "betrag" : 43.0,
     "beschreibung" : "von Mama",
-    "kategorie" : "",
+    "kategorie" : "?",
     "zahlungsweise" : "K"
   }, {
     "datum" : "2/8/22",
     "betrag" : -42.49,
     "beschreibung" : "Papa (Monitorhalterung)",
-    "kategorie" : "",
+    "kategorie" : "?",
     "zahlungsweise" : "K"
   }, {
     "datum" : "2/11/22",
@@ -152,7 +152,7 @@
     "datum" : "2/11/22",
     "betrag" : 49.95,
     "beschreibung" : "Umbuchung",
-    "kategorie" : "",
+    "kategorie" : "?",
     "zahlungsweise" : ""
   }, {
     "datum" : "2/11/22",
@@ -183,7 +183,7 @@
     "datum" : "2/18/22",
     "betrag" : 8.11,
     "beschreibung" : "von Robin ",
-    "kategorie" : "",
+    "kategorie" : "?",
     "zahlungsweise" : "K"
   }, {
     "datum" : "2/18/22",
@@ -214,7 +214,7 @@
     "datum" : "2/24/22",
     "betrag" : -2.7,
     "beschreibung" : "Lisann Wii",
-    "kategorie" : "",
+    "kategorie" : "?",
     "zahlungsweise" : "K"
   }, {
     "datum" : "2/25/22",
@@ -226,7 +226,7 @@
     "datum" : "2/25/22",
     "betrag" : -64.52,
     "beschreibung" : "Angelika",
-    "kategorie" : "",
+    "kategorie" : "?",
     "zahlungsweise" : "K"
   }, {
     "datum" : "2/26/22",
@@ -250,13 +250,13 @@
     "datum" : "2/26/22",
     "betrag" : -2.1,
     "beschreibung" : "Snacks",
-    "kategorie" : "",
+    "kategorie" : "?",
     "zahlungsweise" : "K"
   }, {
     "datum" : "2/26/22",
     "betrag" : 3.0,
     "beschreibung" : "von Robin",
-    "kategorie" : "",
+    "kategorie" : "?",
     "zahlungsweise" : "K"
   } ],
   "KW9" : [ {
@@ -275,7 +275,7 @@
     "datum" : "3/3/22",
     "betrag" : -95.94,
     "beschreibung" : "Amazon",
-    "kategorie" : "",
+    "kategorie" : "?",
     "zahlungsweise" : "K"
   }, {
     "datum" : "4/4/22",
@@ -318,7 +318,7 @@
     "datum" : "3/9/22",
     "betrag" : -10.0,
     "beschreibung" : "Eis essen",
-    "kategorie" : "",
+    "kategorie" : "?",
     "zahlungsweise" : "B"
   } ]
 }
