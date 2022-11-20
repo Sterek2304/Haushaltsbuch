@@ -1,36 +1,324 @@
 {
   "KW1" : [ {
     "datum" : "1/3/22",
-    "betrag" : 6.5,
+    "betrag" : -6.5,
     "beschreibung" : "30° (h) + 60° (d)",
     "kategorie" : "Wäsche",
     "zahlungsweise" : "K"
   }, {
     "datum" : "1/4/22",
-    "betrag" : 3.99,
+    "betrag" : -3.99,
     "beschreibung" : "Say Money Pro (Handy)",
     "kategorie" : "EDV",
     "zahlungsweise" : "K"
   }, {
     "datum" : "1/6/22",
-    "betrag" : 6.5,
+    "betrag" : -6.5,
     "beschreibung" : "30° (d) + 60° (h)",
     "kategorie" : "Wäsche",
     "zahlungsweise" : "K"
   }, {
     "datum" : "1/7/22",
-    "betrag" : 79.61,
+    "betrag" : -79.61,
     "beschreibung" : "Rewe",
     "kategorie" : "Einkaufen",
     "zahlungsweise" : "K"
   } ],
-  "KW2" : [ ],
-  "KW3" : [ ],
-  "KW4" : [ ],
-  "KW5" : [ ],
-  "KW6" : [ ],
-  "KW7" : [ ],
-  "KW8" : [ ],
-  "KW9" : [ ],
-  "KW10" : [ ]
+  "KW2" : [ {
+    "datum" : "1/12/22",
+    "betrag" : -4.99,
+    "beschreibung" : "Sky Ticket",
+    "kategorie" : "Streaming",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "1/14/22",
+    "betrag" : -80.34,
+    "beschreibung" : "Rewe",
+    "kategorie" : "Einkaufen",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "1/14/22",
+    "betrag" : -6.5,
+    "beschreibung" : "30° (h) + 60° (d)",
+    "kategorie" : "Wäsche",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "1/16/22",
+    "betrag" : -7.92,
+    "beschreibung" : "Rossmann",
+    "kategorie" : "Drogerie",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "1/16/22",
+    "betrag" : -15.0,
+    "beschreibung" : "Flaschenpost",
+    "kategorie" : "Einkaufen",
+    "zahlungsweise" : "K"
+  } ],
+  "KW3" : [ {
+    "datum" : "1/21/22",
+    "betrag" : -74.47,
+    "beschreibung" : "Rewe",
+    "kategorie" : "Einkaufen",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "1/21/22",
+    "betrag" : -6.5,
+    "beschreibung" : "30° (d) + 60° (h)",
+    "kategorie" : "Wäsche",
+    "zahlungsweise" : "K"
+  } ],
+  "KW4" : [ {
+    "datum" : "1/25/22",
+    "betrag" : 230.24,
+    "beschreibung" : "Gehalt",
+    "kategorie" : "Gehalt",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "1/25/22",
+    "betrag" : -46.68,
+    "beschreibung" : "Amazon",
+    "kategorie" : "",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "1/26/22",
+    "betrag" : -45.98,
+    "beschreibung" : "Unterhosen",
+    "kategorie" : "Kleidung",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "1/28/22",
+    "betrag" : -74.64,
+    "beschreibung" : "Rewe",
+    "kategorie" : "Einkaufen",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "1/28/22",
+    "betrag" : -6.5,
+    "beschreibung" : "60° + 30° (d)",
+    "kategorie" : "Wäsche",
+    "zahlungsweise" : "K"
+  } ],
+  "KW5" : [ {
+    "datum" : "2/2/22",
+    "betrag" : -133.39,
+    "beschreibung" : "Amazon",
+    "kategorie" : "",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "2/4/22",
+    "betrag" : -44.36,
+    "beschreibung" : "Rewe",
+    "kategorie" : "Einkaufen",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "2/5/22",
+    "betrag" : -6.5,
+    "beschreibung" : "30° (h)  + 60° (d)",
+    "kategorie" : "Wäsche",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "2/5/22",
+    "betrag" : -105.0,
+    "beschreibung" : "Acer Nitro VG220",
+    "kategorie" : "EDV",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "2/5/22",
+    "betrag" : -16.4,
+    "beschreibung" : "DM",
+    "kategorie" : "Drogerie",
+    "zahlungsweise" : "K"
+  } ],
+  "KW6" : [ {
+    "datum" : "2/8/22",
+    "betrag" : 43.0,
+    "beschreibung" : "von Mama",
+    "kategorie" : "",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "2/8/22",
+    "betrag" : -42.49,
+    "beschreibung" : "Papa (Monitorhalterung)",
+    "kategorie" : "",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "2/11/22",
+    "betrag" : -49.95,
+    "beschreibung" : "Fabletics",
+    "kategorie" : "Kleidung",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "2/11/22",
+    "betrag" : 49.95,
+    "beschreibung" : "Umbuchung",
+    "kategorie" : "",
+    "zahlungsweise" : ""
+  }, {
+    "datum" : "2/11/22",
+    "betrag" : -3.0,
+    "beschreibung" : "30° (d)",
+    "kategorie" : "Wäsche",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "2/11/22",
+    "betrag" : -67.65,
+    "beschreibung" : "Rewe",
+    "kategorie" : "Einkaufen",
+    "zahlungsweise" : "K"
+  } ],
+  "KW7" : [ {
+    "datum" : "2/16/22",
+    "betrag" : -11.75,
+    "beschreibung" : "Rewe",
+    "kategorie" : "Einkaufen",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "2/18/22",
+    "betrag" : -8.11,
+    "beschreibung" : "Bäcker",
+    "kategorie" : "Einkaufen",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "2/18/22",
+    "betrag" : 8.11,
+    "beschreibung" : "von Robin ",
+    "kategorie" : "",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "2/18/22",
+    "betrag" : -46.75,
+    "beschreibung" : "Rewe",
+    "kategorie" : "Einkaufen",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "2/19/22",
+    "betrag" : -6.5,
+    "beschreibung" : "30° (h) + 60° (d)",
+    "kategorie" : "Wäsche",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "2/19/22",
+    "betrag" : -3.98,
+    "beschreibung" : "Film",
+    "kategorie" : "Filme",
+    "zahlungsweise" : "K"
+  } ],
+  "KW8" : [ {
+    "datum" : "2/22/22",
+    "betrag" : -16.18,
+    "beschreibung" : "Rewe",
+    "kategorie" : "Einkaufen",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "2/24/22",
+    "betrag" : -2.7,
+    "beschreibung" : "Lisann Wii",
+    "kategorie" : "",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "2/25/22",
+    "betrag" : 661.09,
+    "beschreibung" : "Gehalt",
+    "kategorie" : "Gehalt",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "2/25/22",
+    "betrag" : -64.52,
+    "beschreibung" : "Angelika",
+    "kategorie" : "",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "2/26/22",
+    "betrag" : -67.9,
+    "beschreibung" : "Rewe",
+    "kategorie" : "Einkaufen",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "2/26/22",
+    "betrag" : -3.0,
+    "beschreibung" : "30° (d)",
+    "kategorie" : "Wäsche",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "2/26/22",
+    "betrag" : -8.91,
+    "beschreibung" : "Rewe",
+    "kategorie" : "Einkaufen",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "2/26/22",
+    "betrag" : -2.1,
+    "beschreibung" : "Snacks",
+    "kategorie" : "",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "2/26/22",
+    "betrag" : 3.0,
+    "beschreibung" : "von Robin",
+    "kategorie" : "",
+    "zahlungsweise" : "K"
+  } ],
+  "KW9" : [ {
+    "datum" : "2/28/22",
+    "betrag" : -17.0,
+    "beschreibung" : "Amazon Prime",
+    "kategorie" : "Streaming",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "3/1/22",
+    "betrag" : -9.2,
+    "beschreibung" : "DM",
+    "kategorie" : "Drogerie",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "3/3/22",
+    "betrag" : -95.94,
+    "beschreibung" : "Amazon",
+    "kategorie" : "",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "4/4/22",
+    "betrag" : -6.5,
+    "beschreibung" : "60° (d) + 30° (h)",
+    "kategorie" : "Wäsche",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "4/4/22",
+    "betrag" : -55.32,
+    "beschreibung" : "Rewe",
+    "kategorie" : "Einkaufen",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "3/5/22",
+    "betrag" : -40.0,
+    "beschreibung" : "Alex (Restaurant)",
+    "kategorie" : "Essen gehen",
+    "zahlungsweise" : "B"
+  }, {
+    "datum" : "3/5/22",
+    "betrag" : -47.89,
+    "beschreibung" : "Mayersche",
+    "kategorie" : "Bücher",
+    "zahlungsweise" : "K"
+  } ],
+  "KW10" : [ {
+    "datum" : "3/9/22",
+    "betrag" : -5.0,
+    "beschreibung" : "Pille",
+    "kategorie" : "Drogerie",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "3/9/22",
+    "betrag" : -19.27,
+    "beschreibung" : "Rewe",
+    "kategorie" : "Einkaufen",
+    "zahlungsweise" : "K"
+  }, {
+    "datum" : "3/9/22",
+    "betrag" : -10.0,
+    "beschreibung" : "Eis essen",
+    "kategorie" : "",
+    "zahlungsweise" : "B"
+  } ]
 }

@@ -40,18 +40,27 @@ public class Haushaltsbuch {
 	@SerializedName("KW10")
 	private List<Eintrag> kw10;
 
-	private Map<String, List<Eintrag>> ganzeHaushaltsbuch = new HashMap<>();
+	public Map<Integer, List<Eintrag>> haushaltsbuch() {
+		HashMap<Integer, List<Eintrag>> eintraege = new HashMap<>();
+		eintraege.put(1, kw1);
+		eintraege.put(2, kw2);
+		eintraege.put(3, kw3);
+		eintraege.put(4, kw4);
+		eintraege.put(5, kw5);
+		eintraege.put(6, kw6);
+		eintraege.put(7, kw7);
+		eintraege.put(8, kw8);
+		eintraege.put(9, kw9);
+		eintraege.put(10, kw10);
 
-	public Haushaltsbuch() {
-		ganzeHaushaltsbuch.put("1", kw1);
-		ganzeHaushaltsbuch.put("2", kw2);
-		ganzeHaushaltsbuch.put("3", kw3);
-		ganzeHaushaltsbuch.put("4", kw4);
-		ganzeHaushaltsbuch.put("5", kw5);
-		ganzeHaushaltsbuch.put("6", kw6);
-		ganzeHaushaltsbuch.put("7", kw7);
-		ganzeHaushaltsbuch.put("8", kw8);
-		ganzeHaushaltsbuch.put("9", kw9);
-		ganzeHaushaltsbuch.put("10", kw10);
+		return eintraege;
+	}
+
+	public List<Eintrag> getKW(int index) {
+		return haushaltsbuch().get(index);
+	}
+
+	public int getAnzahlKW() {
+		return haushaltsbuch().size();
 	}
 }

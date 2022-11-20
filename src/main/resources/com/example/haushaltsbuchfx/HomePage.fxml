@@ -37,7 +37,7 @@
     <TableView id="contentTable" fx:id="contentTable" prefHeight="672.0" prefWidth="1000.0">
         <columns>
             <TableColumn fx:id="datumTableCol" prefWidth="100.0" text="Datum" />
-            <TableColumn fx:id="betragTableCol" prefWidth="100.0" text="Betrag" />
+            <TableColumn fx:id="betragTableCol" prefWidth="100.0" text="Betrag €" />
             <TableColumn fx:id="beschreibungTableCol" prefWidth="560.0" text="Beschreibung" />
             <TableColumn fx:id="kategorieTableCol" prefWidth="136.0" text="Kategorie" />
             <TableColumn fx:id="zahlungsweiseTableCol" minWidth="0.0" prefWidth="103.0" text="Zahlungsweise" />

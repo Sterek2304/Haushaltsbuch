@@ -53,7 +53,7 @@ public class HomePageController {
                 disableButton(kwZurueckButton);
             }
 
-            loadData();
+            loadData(ausgewaehlteKW);
         });
     }
 
@@ -62,7 +62,7 @@ public class HomePageController {
         ausgewaehlteKW++;
         ausgewaehltesDatumLabel.setText("KW " + ausgewaehlteKW);
 
-        if(ausgewaehlteKW == 52) {
+        if(haushaltsbuch.getAnzahlKW() == ausgewaehlteKW) {
             disableButton(kwVorButton);
         }
 
@@ -70,7 +70,7 @@ public class HomePageController {
             enableButton(kwZurueckButton);
         }
 
-        //TODO: Tabelle mit ausgewählter KW aktualisieren
+        loadData(ausgewaehlteKW);
     }
 
     @FXML
@@ -86,7 +86,7 @@ public class HomePageController {
             enableButton(kwVorButton);
         }
 
-        //TODO: Tabelle mit ausgewählter KW aktualisieren
+        loadData(ausgewaehlteKW);
     }
 
     /**
@@ -117,13 +117,15 @@ public class HomePageController {
         button.setDisable(false);
     }
 
-    public void loadData() {
-        ObservableList<Eintrag> data = FXCollections.observableList(haushaltsbuch.getKw1());
+    public void loadData(int kw) {
+        ObservableList<Eintrag> data = FXCollections.observableList(haushaltsbuch.getKW(kw));
+
         datumTableCol.setCellValueFactory(new PropertyValueFactory<>("datum"));
         betragTableCol.setCellValueFactory(new PropertyValueFactory<>("betrag"));
         beschreibungTableCol.setCellValueFactory(new PropertyValueFactory<>("beschreibung"));
         kategorieTableCol.setCellValueFactory(new PropertyValueFactory<>("kategorie"));
         zahlungsweiseTableCol.setCellValueFactory(new PropertyValueFactory<>("zahlungsweise"));
+
         contentTable.setItems(data);
     }
 }
