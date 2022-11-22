@@ -1,6 +1,8 @@
 package controller;
 
 import javafx.application.Platform;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -17,20 +19,16 @@ import java.time.LocalDate;
 
 @Data
 public class HomePageController {
-    private static int ausgewaehlteKW = 1;
-
+    private static IntegerProperty countKW = new SimpleIntegerProperty(1);
+    private static IntegerProperty ausgewaehlteKW = new SimpleIntegerProperty();
     @FXML
     private Button kwZurueckButton;
-
     @FXML
     private Button kwVorButton;
-
     @FXML
     private Label ausgewaehltesDatumLabel;
-
     @FXML
     private TableView<Eintrag> contentTable;
-
     @FXML
     private TableColumn<Eintrag, LocalDate> datumTableCol;
     @FXML
@@ -41,28 +39,28 @@ public class HomePageController {
     private TableColumn<Eintrag, String> kategorieTableCol;
     @FXML
     private TableColumn<Eintrag, String> zahlungsweiseTableCol;
-
     private Haushaltsbuch haushaltsbuch;
 
     @FXML
     protected void initialize() {
         Platform.runLater(() -> {
-            ausgewaehltesDatumLabel.setText("KW " + ausgewaehlteKW);
+            ausgewaehlteKW.bind(countKW);
+            ausgewaehltesDatumLabel.setText("KW " + ausgewaehlteKW.intValue());
 
-            if(ausgewaehlteKW == 1) {
+            if(countKW.getValue() == 1) {
                 disableButton(kwZurueckButton);
             }
 
-            loadData(ausgewaehlteKW);
+            loadData(countKW.getValue());
         });
     }
 
     @FXML
     protected void onKWVorButtonClick() {
-        ausgewaehlteKW++;
-        ausgewaehltesDatumLabel.setText("KW " + ausgewaehlteKW);
+        countKW.set(countKW.getValue() + 1);
+        ausgewaehltesDatumLabel.setText("KW " + ausgewaehlteKW.intValue());
 
-        if(haushaltsbuch.getAnzahlKW() == ausgewaehlteKW) {
+        if(haushaltsbuch.getAnzahlKW() == countKW.getValue()) {
             disableButton(kwVorButton);
         }
 
@@ -70,15 +68,15 @@ public class HomePageController {
             enableButton(kwZurueckButton);
         }
 
-        loadData(ausgewaehlteKW);
+        loadData(countKW.getValue());
     }
 
     @FXML
     protected void onKWZurueckButtonClick() {
-        ausgewaehlteKW--;
-        ausgewaehltesDatumLabel.setText("KW " + ausgewaehlteKW);
+        countKW.set(countKW.getValue() - 1);
+        ausgewaehltesDatumLabel.setText("KW " + ausgewaehlteKW.intValue());
 
-        if(ausgewaehlteKW == 1) {
+        if(countKW.getValue() == 1) {
             disableButton(kwZurueckButton);
         }
 
@@ -86,21 +84,21 @@ public class HomePageController {
             enableButton(kwVorButton);
         }
 
-        loadData(ausgewaehlteKW);
+        loadData(countKW.getValue());
     }
 
     /**
      * return true - wenn die ausgewählte KW > 1 ist
      * */
     private boolean isKWOverOne() {
-        return ausgewaehlteKW > 1;
+        return countKW.getValue() > 1;
     }
 
     /**
      * return true - wenn die ausgewählte KW < 52 ist
      * */
     private boolean isKWUnder52() {
-        return ausgewaehlteKW < 52;
+        return countKW.getValue() < 52;
     }
 
     /**
