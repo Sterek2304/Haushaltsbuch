@@ -1,8 +1,7 @@
 package controller;
 
 import javafx.application.Platform;
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -15,22 +14,24 @@ import lombok.Data;
 import model.Eintrag;
 import model.Haushaltsbuch;
 
-import java.time.LocalDate;
-
 @Data
 public class HomePageController {
-    private static IntegerProperty countKW = new SimpleIntegerProperty(1);
-    private static IntegerProperty ausgewaehlteKW = new SimpleIntegerProperty();
+    private static int ausgewaehlteKW = 1;
+
     @FXML
     private Button kwZurueckButton;
+
     @FXML
     private Button kwVorButton;
+
     @FXML
     private Label ausgewaehltesDatumLabel;
+
     @FXML
     private TableView<Eintrag> contentTable;
+
     @FXML
-    private TableColumn<Eintrag, LocalDate> datumTableCol;
+    private TableColumn<Eintrag, String> datumTableCol;
     @FXML
     private TableColumn<Eintrag, Double> betragTableCol;
     @FXML
@@ -39,28 +40,28 @@ public class HomePageController {
     private TableColumn<Eintrag, String> kategorieTableCol;
     @FXML
     private TableColumn<Eintrag, String> zahlungsweiseTableCol;
+
     private Haushaltsbuch haushaltsbuch;
 
     @FXML
     protected void initialize() {
         Platform.runLater(() -> {
-            ausgewaehlteKW.bind(countKW);
-            ausgewaehltesDatumLabel.setText("KW " + ausgewaehlteKW.intValue());
+            ausgewaehltesDatumLabel.setText("KW " + ausgewaehlteKW);
 
-            if(countKW.getValue() == 1) {
+            if(ausgewaehlteKW == 1) {
                 disableButton(kwZurueckButton);
             }
 
-            loadData(countKW.getValue());
+            loadData(ausgewaehlteKW);
         });
     }
 
     @FXML
     protected void onKWVorButtonClick() {
-        countKW.set(countKW.getValue() + 1);
-        ausgewaehltesDatumLabel.setText("KW " + ausgewaehlteKW.intValue());
+        ausgewaehlteKW++;
+        ausgewaehltesDatumLabel.setText("KW " + ausgewaehlteKW);
 
-        if(haushaltsbuch.getAnzahlKW() == countKW.getValue()) {
+        if(haushaltsbuch.getAnzahlKW() == ausgewaehlteKW) {
             disableButton(kwVorButton);
         }
 
@@ -68,15 +69,15 @@ public class HomePageController {
             enableButton(kwZurueckButton);
         }
 
-        loadData(countKW.getValue());
+        loadData(ausgewaehlteKW);
     }
 
     @FXML
     protected void onKWZurueckButtonClick() {
-        countKW.set(countKW.getValue() - 1);
-        ausgewaehltesDatumLabel.setText("KW " + ausgewaehlteKW.intValue());
+        ausgewaehlteKW--;
+        ausgewaehltesDatumLabel.setText("KW " + ausgewaehlteKW);
 
-        if(countKW.getValue() == 1) {
+        if(ausgewaehlteKW == 1) {
             disableButton(kwZurueckButton);
         }
 
@@ -84,21 +85,21 @@ public class HomePageController {
             enableButton(kwVorButton);
         }
 
-        loadData(countKW.getValue());
+        loadData(ausgewaehlteKW);
     }
 
     /**
      * return true - wenn die ausgewählte KW > 1 ist
      * */
     private boolean isKWOverOne() {
-        return countKW.getValue() > 1;
+        return ausgewaehlteKW > 1;
     }
 
     /**
      * return true - wenn die ausgewählte KW < 52 ist
      * */
     private boolean isKWUnder52() {
-        return countKW.getValue() < 52;
+        return ausgewaehlteKW < 52;
     }
 
     /**
@@ -118,7 +119,11 @@ public class HomePageController {
     public void loadData(int kw) {
         ObservableList<Eintrag> data = FXCollections.observableList(haushaltsbuch.getKW(kw));
 
-        datumTableCol.setCellValueFactory(new PropertyValueFactory<>("datum"));
+        datumTableCol.setCellValueFactory(datum -> {
+            SimpleStringProperty date = new SimpleStringProperty();
+            date.setValue(datum.getValue().getGermanDate());
+            return date;
+        });
         betragTableCol.setCellValueFactory(new PropertyValueFactory<>("betrag"));
         beschreibungTableCol.setCellValueFactory(new PropertyValueFactory<>("beschreibung"));
         kategorieTableCol.setCellValueFactory(new PropertyValueFactory<>("kategorie"));
