@@ -1,6 +1,7 @@
 package controller;
 
 import javafx.application.Platform;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -12,8 +13,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import lombok.Data;
 import model.Eintrag;
 import model.Haushaltsbuch;
-
-import java.time.LocalDate;
 
 @Data
 public class HomePageController {
@@ -32,7 +31,7 @@ public class HomePageController {
     private TableView<Eintrag> contentTable;
 
     @FXML
-    private TableColumn<Eintrag, LocalDate> datumTableCol;
+    private TableColumn<Eintrag, String> datumTableCol;
     @FXML
     private TableColumn<Eintrag, Double> betragTableCol;
     @FXML
@@ -120,7 +119,11 @@ public class HomePageController {
     public void loadData(int kw) {
         ObservableList<Eintrag> data = FXCollections.observableList(haushaltsbuch.getKW(kw));
 
-        datumTableCol.setCellValueFactory(new PropertyValueFactory<>("datum"));
+        datumTableCol.setCellValueFactory(datum -> {
+            SimpleStringProperty date = new SimpleStringProperty();
+            date.setValue(datum.getValue().getGermanDate());
+            return date;
+        });
         betragTableCol.setCellValueFactory(new PropertyValueFactory<>("betrag"));
         beschreibungTableCol.setCellValueFactory(new PropertyValueFactory<>("beschreibung"));
         kategorieTableCol.setCellValueFactory(new PropertyValueFactory<>("kategorie"));
