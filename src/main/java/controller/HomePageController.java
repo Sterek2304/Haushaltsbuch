@@ -65,9 +65,7 @@ public class HomePageController {
             disableButton(kwVorButton);
         }
 
-        if(isKWOverOne() && kwZurueckButton.isDisabled()) {
-            enableButton(kwZurueckButton);
-        }
+        kwZurueckButton.setDisable(!isKWOverOne());
 
         loadData(ausgewaehlteKW);
     }
@@ -81,9 +79,7 @@ public class HomePageController {
             disableButton(kwZurueckButton);
         }
 
-        if(isKWUnder52() && kwVorButton.isDisabled()) {
-            enableButton(kwVorButton);
-        }
+        kwVorButton.setDisable(!isKWUnder52());
 
         loadData(ausgewaehlteKW);
     }
@@ -107,13 +103,6 @@ public class HomePageController {
      * */
     private void disableButton(Button button) {
         button.setDisable(true);
-    }
-
-    /**
-     * macht den übergebenen Button "klickbar"
-     * */
-    private void enableButton(Button button) {
-        button.setDisable(false);
     }
 
     public void loadData(int kw) {
